@@ -8,6 +8,7 @@ import { articles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Articles",
   description: "Practical, honest guidance on learning Arabic: no invented statistics, just what actually helps.",
+  alternates: { canonical: "/articles" },
 };
 
 export default function ArticlesPage() {

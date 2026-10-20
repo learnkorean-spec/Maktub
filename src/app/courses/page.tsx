@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Courses & Dialects",
   description:
     "Find the right Arabic dialect for your goal: Egyptian Arabic and Modern Standard Arabic are open now; more dialects open as real tutors join.",
+  alternates: { canonical: "/courses" },
 };
 
 export default function CoursesPage() {
