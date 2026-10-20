@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -32,22 +33,33 @@ export default function ArticlesPage() {
               <Link
                 key={article.slug}
                 href={`/articles/${article.slug}`}
-                className="block py-8 first:pt-0"
+                className="flex flex-col gap-5 py-8 first:pt-0 sm:flex-row sm:items-start"
               >
-                <p className="text-xs font-semibold uppercase tracking-wide text-ink/40">
-                  {new Date(article.publishedAt).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </p>
-                <h2 className="mt-2 font-heading text-xl font-bold text-ink transition group-hover:text-ink">
-                  {article.title}
-                </h2>
-                <p className="mt-2 text-ink/70">{article.description}</p>
-                <span className="mt-3 inline-block text-sm font-semibold text-ink/70">
-                  Read more →
-                </span>
+                <div className="relative h-44 w-full shrink-0 overflow-hidden rounded-card sm:h-28 sm:w-44">
+                  <Image
+                    src={article.image}
+                    alt={article.imageAlt}
+                    fill
+                    sizes="(min-width: 640px) 176px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-ink/40">
+                    {new Date(article.publishedAt).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </p>
+                  <h2 className="mt-2 font-heading text-xl font-bold text-ink transition group-hover:text-ink">
+                    {article.title}
+                  </h2>
+                  <p className="mt-2 text-ink/70">{article.description}</p>
+                  <span className="mt-3 inline-block text-sm font-semibold text-ink/70">
+                    Read more →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

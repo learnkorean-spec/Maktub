@@ -13,11 +13,21 @@ export interface Article {
   description: string;
   publishedAt: string; // ISO date
   body: string[]; // paragraphs; a string starting with "## " is a subheading
+  /**
+   * Hero/thumbnail image (public/articles/<slug>.jpg), one per article.
+   * Same photography set as the homepage dialect cards — location/atmosphere
+   * shots, not claimed student photos (see content.ts's integrity note on
+   * showing people in this photography).
+   */
+  image: string;
+  imageAlt: string;
 }
 
 export const articles: Article[] = [
   {
     slug: "fusha-vs-egyptian-arabic",
+    image: "/articles/fusha-vs-egyptian-arabic.jpg",
+    imageAlt: "Two people talking over notebooks and tea on a Cairo balcony at golden hour",
     title: "Fusha vs. Egyptian Arabic: which should you actually learn first?",
     description:
       "Modern Standard Arabic and spoken Egyptian dialect serve different goals. Here's how to tell which one matches yours.",
@@ -36,6 +46,8 @@ export const articles: Article[] = [
   },
   {
     slug: "starting-arabic-from-zero",
+    image: "/articles/starting-arabic-from-zero.jpg",
+    imageAlt: "An open notebook, pen and tea on a quiet Cairo terrace at sunset, mosque skyline in the distance",
     title: "Starting Arabic from zero: a realistic first month",
     description:
       "What actually happens in the first weeks of learning Arabic — the script, the sounds, and the most common place beginners get stuck.",
@@ -52,6 +64,8 @@ export const articles: Article[] = [
   },
   {
     slug: "why-egyptian-arabic",
+    image: "/articles/why-egyptian-arabic.jpg",
+    imageAlt: "Friends on a Cairo rooftop at sunset with the Nile and pyramids on the skyline",
     title: "Why Egyptian Arabic is often the first dialect people learn",
     description:
       "Egyptian Arabic isn't the only spoken dialect worth learning, but there's a concrete reason it's usually the easiest to start with.",
@@ -64,6 +78,8 @@ export const articles: Article[] = [
   },
   {
     slug: "how-long-to-learn-arabic",
+    image: "/articles/how-long-to-learn-arabic.jpg",
+    imageAlt: "A group chatting and studying together on a Red Sea beach terrace at sunset",
     title: "How long does it actually take to learn Arabic?",
     description:
       "There's no single answer, but the honest range depends heavily on your goal, your native language, and whether you're learning Fusha, a dialect, or both.",
@@ -82,6 +98,8 @@ export const articles: Article[] = [
   },
   {
     slug: "arabic-for-english-speakers-challenges",
+    image: "/articles/arabic-for-english-speakers-challenges.jpg",
+    imageAlt: "A man on a video call with a laptop on a Cairo terrace, mosque skyline at sunset",
     title: "Arabic for English speakers: the real challenges (and the ones that don't matter)",
     description:
       "The script and a few throat sounds get all the attention, but they're not what actually slows English speakers down. Here's what does.",
@@ -102,6 +120,8 @@ export const articles: Article[] = [
   },
   {
     slug: "best-way-to-learn-arabic-alphabet",
+    image: "/articles/best-way-to-learn-arabic-alphabet.jpg",
+    imageAlt: "An open notebook and pen on a Cairo terrace table at sunset, ready for writing practice",
     title: "The best way to learn the Arabic alphabet (without burning out in week one)",
     description:
       "A practical order for learning Arabic letters, sounds, and joining rules — and the common mistake that makes the alphabet feel harder than it is.",
@@ -122,6 +142,8 @@ export const articles: Article[] = [
   },
   {
     slug: "online-tutor-vs-language-app",
+    image: "/articles/online-tutor-vs-language-app.jpg",
+    imageAlt: "Two people in conversation over a laptop on a Marrakech rooftop at sunset",
     title: "Online Arabic tutor vs. a language-learning app: what each is actually good for",
     description:
       "Apps and live tutors aren't competing for the same job. Here's where each genuinely helps, and where relying on only one tends to stall progress.",
@@ -140,6 +162,8 @@ export const articles: Article[] = [
   },
   {
     slug: "business-arabic-what-you-actually-need",
+    image: "/articles/business-arabic-what-you-actually-need.jpg",
+    imageAlt: "Two people in conversation over a laptop with the Dubai skyline in the background",
     title: "Business Arabic: what professionals actually need (and what's a waste of time)",
     description:
       "Working with Arabic-speaking colleagues or clients doesn't require fluency in everything. Here's what to prioritize and what to skip.",
@@ -158,6 +182,8 @@ export const articles: Article[] = [
   },
   {
     slug: "arabic-greetings-and-etiquette",
+    image: "/articles/arabic-greetings-and-etiquette.jpg",
+    imageAlt: "Two people greeting each other warmly on an Amman terrace at sunset",
     title: "Arabic greetings and etiquette: what to know before you say \"marhaba\"",
     description:
       "Arabic greetings carry more social weight than their English equivalents, and getting them slightly wrong is noticeable. Here's what actually matters.",
@@ -178,6 +204,8 @@ export const articles: Article[] = [
   },
   {
     slug: "egyptian-vs-levantine-vs-gulf-arabic",
+    image: "/articles/egyptian-vs-levantine-vs-gulf-arabic.jpg",
+    imageAlt: "A mixed group in Egyptian, Levantine and Gulf dress chatting together on a Cairo rooftop at sunset",
     title: "Egyptian vs. Levantine vs. Gulf Arabic: how different are they, really?",
     description:
       "Arabic dialects aren't accents of one spoken language — they're distinct enough that native speakers sometimes need to adjust to understand each other.",
@@ -196,6 +224,8 @@ export const articles: Article[] = [
   },
   {
     slug: "traveling-to-egypt-how-much-arabic",
+    image: "/articles/traveling-to-egypt-how-much-arabic.jpg",
+    imageAlt: "Friends laughing together closely on a Cairo terrace at sunset",
     title: "Traveling to Egypt: how much Arabic do you actually need?",
     description:
       "You can get by in Egypt's major tourist areas with minimal Arabic, but a little goes a long way — here's what's actually useful to learn before you go.",
@@ -216,6 +246,8 @@ export const articles: Article[] = [
   },
   {
     slug: "fusha-quranic-arabic-religious-study",
+    image: "/articles/fusha-quranic-arabic-religious-study.jpg",
+    imageAlt: "A group talking together on a terrace overlooking Petra's ancient Treasury at sunset",
     title: "Learning Arabic for religious study: Fusha, Quranic Arabic, and the difference",
     description:
       "Students studying Arabic for religious reasons often conflate Quranic Arabic with Modern Standard Arabic. They're related but not identical — here's the distinction.",
@@ -234,6 +266,8 @@ export const articles: Article[] = [
   },
   {
     slug: "one-on-one-tutoring-vs-classroom-arabic",
+    image: "/articles/one-on-one-tutoring-vs-classroom-arabic.jpg",
+    imageAlt: "A group of five talking together on an Amman rooftop overlooking the old city at sunset",
     title: "One-on-one Arabic tutoring vs. a classroom: why it matters more for Arabic than for most languages",
     description:
       "Group classes work fine for many languages, but Arabic's pronunciation demands and the Fusha/dialect split make individual attention disproportionately valuable.",

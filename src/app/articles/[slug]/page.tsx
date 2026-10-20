@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -26,6 +27,13 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       description: article.description,
       type: "article",
       publishedTime: article.publishedAt,
+      images: [article.image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.description,
+      images: [article.image],
     },
   };
 }
@@ -71,6 +79,16 @@ export default async function ArticlePage({ params }: { params: Params }) {
             <h1 className="mt-2 font-heading text-3xl font-bold text-ink sm:text-4xl">
               {article.title}
             </h1>
+            <div className="relative mt-8 h-56 w-full overflow-hidden rounded-card sm:h-80">
+              <Image
+                src={article.image}
+                alt={article.imageAlt}
+                fill
+                priority
+                sizes="(min-width: 672px) 672px, 100vw"
+                className="object-cover"
+              />
+            </div>
             <div className="prose-ink mt-8 space-y-5 text-lg leading-relaxed text-ink/80">
               {article.body.map((paragraph, i) =>
                 paragraph.startsWith("## ") ? (
