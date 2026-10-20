@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PrimaryCTA } from "./PrimaryCTA";
+import { TRIAL_BOOKING_URL } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -10,7 +11,7 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-[center_25%]"
       />
       {/* Brand rule: no neon text directly on a photo either — the dark
           overlay keeps white/lime text readable, same contrast intent as
@@ -38,7 +39,7 @@ export function Hero() {
             dialects in live classes with native-speaking tutors.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            <PrimaryCTA href="/book-trial">Book a trial class</PrimaryCTA>
+            <PrimaryCTA href={TRIAL_BOOKING_URL}>Book a trial class</PrimaryCTA>
             <PrimaryCTA href="/courses" variant="outline-light">
               Explore dialects
             </PrimaryCTA>

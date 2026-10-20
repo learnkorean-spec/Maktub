@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PrimaryCTA } from "@/components/PrimaryCTA";
+import { tutor, TRIAL_BOOKING_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Tutors & Trial Booking",
@@ -30,13 +31,13 @@ export default function TutorsPage() {
 
         <section className="bg-white py-16 sm:py-20">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <div className="grid gap-10 overflow-hidden rounded-card border border-ink/10 md:grid-cols-2">
-              <div className="relative min-h-64">
+            <div className="grid gap-10 overflow-hidden rounded-card border border-ink/10 md:grid-cols-[22rem_1fr]">
+              <div className="relative min-h-80">
                 <Image
-                  src="/photography/egyptian-cairo-rooftop-study.jpg"
-                  alt="A Cairo rooftop at sunset — no portrait photo of this tutor is published yet"
+                  src={tutor.photo}
+                  alt={tutor.name}
                   fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 768px) 22rem, 100vw"
                   className="object-cover"
                 />
               </div>
@@ -45,26 +46,23 @@ export default function TutorsPage() {
                   Teaching now
                 </span>
                 <h2 className="mt-4 font-heading text-2xl font-bold text-ink">
-                  Reham
+                  {tutor.name}
                 </h2>
-                <p className="mt-1 text-sm font-medium text-ink/60">
-                  Egyptian Arabic &middot; Modern Standard Arabic
+                <p className="mt-1 text-sm font-medium text-ink/60">{tutor.dialects}</p>
+                <p className="mt-4 italic leading-snug text-ink/80">
+                  &ldquo;{tutor.quote}&rdquo;
                 </p>
-                <p className="mt-4 text-ink/75 leading-relaxed">
-                  A native Egyptian Arabic speaker who has spent years
-                  explaining languages across cultures — Korean-Arabic
-                  interpreting, international operations, and teaching
-                  students in more than fifteen countries. Whether you need
-                  Modern Standard Arabic for reading, writing and formal use,
-                  or real spoken Egyptian dialect for conversation,
-                  she&rsquo;ll help you find what matches your goal.
-                </p>
-                <p className="mt-4 text-xs text-ink/50">
-                  No profile photo is published yet — one goes up once an
-                  image release is confirmed.
-                </p>
-                <div className="mt-6">
-                  <PrimaryCTA href="/book-trial">Book a trial with Reham</PrimaryCTA>
+                <p className="mt-4 text-ink/75 leading-relaxed">{tutor.bio}</p>
+                <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <PrimaryCTA href={TRIAL_BOOKING_URL}>Book a trial with Reham</PrimaryCTA>
+                  <a
+                    href="https://kloversegy.com/blog/meet-reham-hungarian-arabic-korean-teacher"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-ink/60 underline decoration-1 underline-offset-4 hover:text-ink"
+                  >
+                    Read her full story on Klovers →
+                  </a>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { PrimaryCTA } from "./PrimaryCTA";
+import { TRIAL_BOOKING_URL } from "@/lib/content";
 
 /**
  * Mobile-only fixed booking CTA. Respects safe-area insets and sits above
@@ -11,7 +12,7 @@ export function MobileStickyCTA() {
       className="fixed inset-x-0 bottom-0 z-30 border-t border-ink/10 bg-ivory/95 p-3 backdrop-blur md:hidden"
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
     >
-      <PrimaryCTA href="/book-trial" className="w-full">
+      <PrimaryCTA href={TRIAL_BOOKING_URL} className="w-full">
         Book a trial class
       </PrimaryCTA>
     </div>

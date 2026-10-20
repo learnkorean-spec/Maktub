@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { PrimaryCTA } from "./PrimaryCTA";
+import { TRIAL_BOOKING_URL } from "@/lib/content";
 
 const navLinks = [
   { href: "/courses", label: "Courses" },
   { href: "/tutors", label: "Tutors" },
-  { href: "/#how-it-works", label: "How it works" },
+  { href: "/articles", label: "Articles" },
   { href: "/#faq", label: "FAQ" },
 ];
 
@@ -27,7 +28,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <PrimaryCTA href="/book-trial" className="text-sm px-5 py-2.5">
+        <PrimaryCTA href={TRIAL_BOOKING_URL} className="text-sm px-5 py-2.5">
           Book a trial class
         </PrimaryCTA>
       </div>

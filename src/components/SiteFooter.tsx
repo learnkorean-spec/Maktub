@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { TRIAL_BOOKING_URL } from "@/lib/content";
 
 export function SiteFooter() {
   return (
@@ -28,8 +29,16 @@ export function SiteFooter() {
             </div>
             <div className="flex flex-col gap-2">
               <span className="font-semibold text-white/90">Company</span>
-              <Link href="/book-trial" className="text-white/70 hover:text-white">
+              <a
+                href={TRIAL_BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 Book a trial class
+              </a>
+              <Link href="/articles" className="text-white/70 hover:text-white">
+                Articles
               </Link>
             </div>
           </nav>

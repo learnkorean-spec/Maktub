@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PrimaryCTA } from "@/components/PrimaryCTA";
 import { CourseDirectory } from "@/components/CourseDirectory";
+import { TRIAL_BOOKING_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Courses & Dialects",
@@ -42,7 +43,7 @@ export default function CoursesPage() {
               dialect.
             </p>
             <div className="mt-6">
-              <PrimaryCTA href="/book-trial" variant="lime">
+              <PrimaryCTA href={TRIAL_BOOKING_URL} variant="lime">
                 Book a trial class
               </PrimaryCTA>
             </div>

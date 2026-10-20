@@ -15,11 +15,21 @@ const variantClasses: Record<NonNullable<PrimaryCTAProps["variant"]>, string> = 
 };
 
 export function PrimaryCTA({ href, children, variant = "lime", className = "" }: PrimaryCTAProps) {
+  const classes = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition focus-visible:outline-offset-4 ${variantClasses[variant]} ${className}`;
+
+  // External links (e.g. the real trial-booking widget on kloversegy.com —
+  // mkatub has no booking backend of its own, see src/lib/content.ts) use a
+  // plain anchor; next/link's Link is for internal routes only.
+  if (href.startsWith("http")) {
+    return (
+      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition focus-visible:outline-offset-4 ${variantClasses[variant]} ${className}`}
-    >
+    <Link href={href} className={classes}>
       {children}
     </Link>
   );

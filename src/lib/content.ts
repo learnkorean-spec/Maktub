@@ -12,6 +12,32 @@
  * tutors join besides Reham before this goes further than Stage 1.
  */
 
+/**
+ * mkatub has no booking backend of its own (no Supabase project, no
+ * Cal.com) — see the README's business-data blocker table. Rather than
+ * fake a calendar, every "Book a trial" CTA links to the one real,
+ * already-live trial-booking system: Reham's PersonalTrialBooking widget
+ * on kloversegy.com/learn-arabic, wired to real availability
+ * (personal_trial_slots) with a WhatsApp fallback if no time works. The
+ * `#trial-booking` anchor was added there on 2026-10-20 specifically so
+ * this link lands on the widget, not the top of the page.
+ */
+export const TRIAL_BOOKING_URL = "https://kloversegy.com/learn-arabic#trial-booking";
+
+/**
+ * Reham's bio facts, pulled from her existing, already-public page at
+ * kloversegy.com/learn-arabic (src/pages/LearnArabicPage.tsx in the
+ * klovers repo) on 2026-10-20 — not re-derived or invented for mkatub.
+ */
+export const tutor = {
+  name: "Reham Elshrkawy",
+  photo: "/tutors/reham.jpg",
+  dialects: "Egyptian Arabic · Modern Standard Arabic",
+  quote:
+    "I know exactly where a translation breaks down between languages — the same gap that makes textbook Arabic feel nothing like real use.",
+  bio: "A native Egyptian Arabic speaker who has spent years explaining languages across cultures — Korean-Arabic interpreting, international operations, and teaching students in more than fifteen countries. She also founded and runs Klovers, an online academy teaching Korean since 2013. Whether you need Modern Standard Arabic for reading, writing and formal use, or real spoken Egyptian dialect for conversation, she'll help you find what matches your goal.",
+};
+
 export type DialectStatus = "available" | "coming-soon";
 
 export interface Dialect {
