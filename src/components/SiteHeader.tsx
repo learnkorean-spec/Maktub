@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { PrimaryCTA } from "./PrimaryCTA";
+import { MobileNav } from "./MobileNav";
 import { TRIAL_BOOKING_URL } from "@/lib/content";
 
 const navLinks = [
@@ -28,9 +29,15 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <PrimaryCTA href={TRIAL_BOOKING_URL} className="text-sm px-5 py-2.5">
-          Book a trial class
-        </PrimaryCTA>
+        <div className="flex items-center gap-2">
+          <PrimaryCTA
+            href={TRIAL_BOOKING_URL}
+            className="hidden text-sm px-5 py-2.5 sm:inline-flex"
+          >
+            Book a trial class
+          </PrimaryCTA>
+          <MobileNav navLinks={navLinks} />
+        </div>
       </div>
     </header>
   );

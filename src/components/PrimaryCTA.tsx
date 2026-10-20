@@ -6,6 +6,7 @@ type PrimaryCTAProps = {
   children: ReactNode;
   variant?: "lime" | "outline-light" | "outline-dark";
   className?: string;
+  onClick?: () => void;
 };
 
 const variantClasses: Record<NonNullable<PrimaryCTAProps["variant"]>, string> = {
@@ -14,7 +15,13 @@ const variantClasses: Record<NonNullable<PrimaryCTAProps["variant"]>, string> = 
   "outline-dark": "border border-ink/70 text-ink hover:bg-ink/5",
 };
 
-export function PrimaryCTA({ href, children, variant = "lime", className = "" }: PrimaryCTAProps) {
+export function PrimaryCTA({
+  href,
+  children,
+  variant = "lime",
+  className = "",
+  onClick,
+}: PrimaryCTAProps) {
   const classes = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition focus-visible:outline-offset-4 ${variantClasses[variant]} ${className}`;
 
   // External links (e.g. the real trial-booking widget on kloversegy.com —
@@ -22,14 +29,14 @@ export function PrimaryCTA({ href, children, variant = "lime", className = "" }:
   // plain anchor; next/link's Link is for internal routes only.
   if (href.startsWith("http")) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={classes} target="_blank" rel="noopener noreferrer" onClick={onClick}>
         {children}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={classes} onClick={onClick}>
       {children}
     </Link>
   );
