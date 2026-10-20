@@ -14,6 +14,15 @@ const navLinks = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/5 bg-ivory/90 backdrop-blur">
+      {/* Every page's <main> carries id="main-content" for exactly this —
+          lets keyboard and screen-reader users jump straight past the nav.
+          Visually hidden until it receives focus. */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-full focus:bg-lime focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink"
+      >
+        Skip to content
+      </a>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/" aria-label="mkatub home">
           <Logo />
