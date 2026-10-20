@@ -10,7 +10,7 @@ The moodboard images in `docs/brand/` are illustrative reference only —
 per that file, their invented reviews/metrics/tutor details never belong
 in product code (see `src/lib/content.ts`'s comment).
 
-## Status: Stage 1 of 4
+## Status: Stage 1 of 4 (polished)
 
 Per the master prompt's delivery stages, this repo currently has:
 
@@ -21,15 +21,28 @@ Per the master prompt's delivery stages, this repo currently has:
 - Original logo (`src/components/Logo.tsx`, static exports in
   `public/brand/`) — a clean placeholder true to the brand spec, not a
   trademark-ready redraw (see note in that file)
-- Shared layout: `SiteHeader`, `SiteFooter`, `PrimaryCTA`,
-  `MobileStickyCTA`
+- Shared layout: `SiteHeader` (with mobile hamburger nav + skip link),
+  `SiteFooter`, `PrimaryCTA`, `MobileStickyCTA`
 - Homepage (`/`) — hero, dialect picker, how-it-works, tutor section, FAQ
-- `/book-trial` — honest "almost ready" placeholder (no fake calendar)
+- `/courses` — real-data course/dialect directory with a working filter
+- `/tutors` — Reham's real bio/photo + trial CTA, honest "more tutors
+  join as dialects open" placeholder
+- `/articles` + `/articles/[slug]` — 3 real, non-invented articles
+- `/book-trial` — redirects straight to the real trial-booking widget
+- Real trial booking: every "Book a trial" CTA links to Reham's live
+  `PersonalTrialBooking` widget on `kloversegy.com/learn-arabic#trial-booking`
+  (Supabase-backed slots + WhatsApp fallback) — mkatub has no booking
+  backend of its own, so this links out rather than faking a calendar
+- `not-found.tsx` — branded 404 (was the bare Next.js default)
+- SEO: `sitemap.ts`, `robots.ts`, per-page metadata, a generated OG/
+  Twitter-card image (`opengraph-image.tsx`)
+- Accessibility: skip-to-content link, mobile nav keyboard/focus support
+- Images: AVIF/WebP via `next/image`, `priority`/`sizes` tuned per image
 
-Not yet built: `/courses`, `/tutors`, live booking, payments, auth,
-database, SEO/analytics instrumentation, accessibility/performance test
-pass. These are Stages 2–4 in the master prompt and are blocked on the
-business inputs below for anything beyond scaffolding.
+Not yet built: live booking/payments/auth of its own, a database,
+analytics instrumentation, a full accessibility/performance audit pass.
+These are Stages 2–4 in the master prompt and are blocked on the
+business inputs below for anything beyond the current polish.
 
 ## Local development
 
@@ -40,6 +53,15 @@ npm run build   # production build
 npx eslint .    # lint
 npx tsc --noEmit  # typecheck
 ```
+
+`npm audit` currently reports 5 high-severity findings, all in
+`eslint-config-next`'s transitive `braces`/`micromatch`/`fast-glob`
+dependency chain — a lint-time devDependency only, never bundled into
+the shipped site. `npm audit fix --force` would downgrade
+`eslint-config-next` to `14.2.35` (a breaking change against Next 16's
+lint rules), so this is left as-is rather than risking the build
+pipeline right before a launch; worth revisiting once there's time to
+verify the downgrade doesn't break lint.
 
 ## Data integrity rule (non-negotiable, from the master prompt)
 
@@ -143,21 +165,28 @@ it:
 
 ## Deployment (subdomain of kloversegy.com)
 
-This is a separate Vercel project from the `klovers` repo, pointed at
-`mkatub.kloversegy.com`:
+This is a separate Vercel project (`mkatub`) from the `klovers` repo/
+project, pointed at `mkatub.kloversegy.com`. The project and domain are
+already set up; `mkatub.kloversegy.com` has appeared as a `READY` alias
+on recent production deployments, so the CNAME is believed to have
+resolved — if it ever looks unresolved again, that was last deferred by
+the user's own instruction ("ignore this now") pending their own DNS/
+registrar access, not something to re-investigate unprompted.
 
-1. Create a new Vercel project linked to this repo.
-2. Add `mkatub.kloversegy.com` as a domain on that Vercel project.
-3. In the DNS zone for `kloversegy.com` (wherever it's hosted — check the
-   `klovers` repo/Vercel project for the current registrar/DNS provider),
-   add the CNAME record Vercel's domain-add flow gives you for `mkatub`.
-4. Once `kloversegy.com/learn-arabic` is redirected here (see the
-   `klovers` repo), that redirect should point at this domain.
+## Relationship to the `klovers` repo — do not redirect `/learn-arabic`
 
-## Relationship to the `klovers` repo
+`kloversegy.com/learn-arabic` (in the `learnkorean-spec/klovers` repo) is
+**not** legacy copy to be superseded. It is the one real, already-live
+trial-booking system — Reham's `PersonalTrialBooking` widget, backed by
+a real Supabase `personal_trial_slots` table with a WhatsApp fallback.
+mkatub has no booking backend of its own.
 
-`kloversegy.com/learn-arabic` (in the `learnkorean-spec/klovers` repo)
-currently serves a similar purpose — Arabic lessons for foreigners — under
-different, Klovers-adjacent branding. Per 2026-10-20 decision: once
-`mkatub.kloversegy.com` is live, `/learn-arabic` and `/ar/learn-arabic` in
-`klovers` get redirected here. Until then, both pages exist independently.
+An earlier pass in this project briefly redirected `/learn-arabic` to
+mkatub and then reverted it on realizing this would have broken the only
+real booking flow in production. The correct, current architecture is
+the opposite direction: mkatub's CTAs link **out to**
+`kloversegy.com/learn-arabic#trial-booking` (see `TRIAL_BOOKING_URL` in
+`src/lib/content.ts`). **Never add a redirect that sends `/learn-arabic`
+or `/ar/learn-arabic` away from klovers** unless a human explicitly
+decides klovers' own booking system is being retired and replaced with
+something equivalent — that hasn't happened.
