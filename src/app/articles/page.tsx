@@ -7,7 +7,7 @@ import { articles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Articles",
-  description: "Practical, honest guidance on learning Arabic — no invented statistics, just what actually helps.",
+  description: "Practical, honest guidance on learning Arabic: no invented statistics, just what actually helps.",
 };
 
 export default function ArticlesPage() {
@@ -21,7 +21,7 @@ export default function ArticlesPage() {
               Articles
             </h1>
             <p className="mt-4 text-lg text-ink/70">
-              Practical guidance on learning Arabic, written honestly — no
+              Practical guidance on learning Arabic, written honestly: no
               invented statistics or results, just what actually helps.
             </p>
           </div>

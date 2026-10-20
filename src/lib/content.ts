@@ -34,8 +34,8 @@ export const tutor = {
   photo: "/tutors/reham.jpg",
   dialects: "Egyptian Arabic · Modern Standard Arabic",
   quote:
-    "I know exactly where a translation breaks down between languages — the same gap that makes textbook Arabic feel nothing like real use.",
-  bio: "A native Egyptian Arabic speaker who has spent years explaining languages across cultures — Korean-Arabic interpreting, international operations, and teaching students in more than fifteen countries. She also founded and runs Klovers, an online academy teaching Korean since 2013. Whether you need Modern Standard Arabic for reading, writing and formal use, or real spoken Egyptian dialect for conversation, she'll help you find what matches your goal.",
+    "I know exactly where a translation breaks down between languages: the same gap that makes textbook Arabic feel nothing like real use.",
+  bio: "A native Egyptian Arabic speaker who has spent years explaining languages across cultures: Korean-Arabic interpreting, international operations, and teaching students in more than fifteen countries. She also founded and runs Klovers, an online academy teaching Korean since 2013. Whether you need Modern Standard Arabic for reading, writing and formal use, or real spoken Egyptian dialect for conversation, she'll help you find what matches your goal.",
 };
 
 export type DialectStatus = "available" | "coming-soon";
@@ -69,7 +69,7 @@ export const dialects: Dialect[] = [
     name: "Egyptian Arabic",
     arabicName: "مصري",
     description:
-      "Real spoken Egyptian dialect — how people actually talk, and the dialect most widely understood across the Arab world thanks to Egyptian film and TV.",
+      "Real spoken Egyptian dialect: how people actually talk, and the dialect most widely understood across the Arab world thanks to Egyptian film and TV.",
     status: "available",
     image: "/photography/egyptian-cairo-rooftop-study.jpg",
     imageAlt: "Friends chatting on a Cairo rooftop at sunset, minarets and the pyramids on the skyline",
@@ -79,7 +79,7 @@ export const dialects: Dialect[] = [
     name: "Modern Standard Arabic",
     arabicName: "الفصحى",
     description:
-      "The formal, written register — reading, writing, religious texts, media, and official documents. The same everywhere in the Arab world.",
+      "The formal, written register: reading, writing, religious texts, media, and official documents. The same everywhere in the Arab world.",
     status: "available",
     image: "/photography/msa-marrakech-rooftop.jpg",
     imageAlt: "Two people talking on a riad terrace overlooking a Marrakech skyline at golden hour",
@@ -107,7 +107,7 @@ export const dialects: Dialect[] = [
 export const howItWorks = [
   {
     title: "A free intro call",
-    body: "Tell us your goal — Fusha, Egyptian dialect, or both — and where you're starting from. Zero is completely fine.",
+    body: "Tell us your goal (Fusha, Egyptian dialect, or both) and where you're starting from. Zero is completely fine.",
   },
   {
     title: "Matched with a native tutor",
@@ -115,25 +115,25 @@ export const howItWorks = [
   },
   {
     title: "Built around what you need",
-    body: "Travel, work, family, exams, or everyday conversation — lessons follow your actual goal, not a fixed textbook order.",
+    body: "Travel, work, family, exams, or everyday conversation: lessons follow your actual goal, not a fixed textbook order.",
   },
 ];
 
 export const faq = [
   {
     q: "What's the difference between Modern Standard Arabic (Fusha) and a spoken dialect?",
-    a: "Fusha is the formal, written Arabic used in media, religious texts and official documents, and it's the same everywhere in the Arab world. A spoken dialect — Egyptian, for example — is how people actually talk day to day. Many learners study both; your tutor will help you find the right mix for your goal.",
+    a: "Fusha is the formal, written Arabic used in media, religious texts and official documents, and it's the same everywhere in the Arab world. A spoken dialect (Egyptian, for example) is how people actually talk day to day. Many learners study both; your tutor will help you find the right mix for your goal.",
   },
   {
     q: "Do I need to know any Arabic already to start?",
-    a: "No — lessons start from zero, whether you're learning Fusha or a spoken dialect.",
+    a: "No, lessons start from zero, whether you're learning Fusha or a spoken dialect.",
   },
   {
     q: "Which dialects are actually available right now?",
-    a: "Egyptian Arabic and Modern Standard Arabic are live today. Other dialects are listed as coming soon — we only open a dialect once we have a real native tutor teaching it, not before.",
+    a: "Egyptian Arabic and Modern Standard Arabic are live today. Other dialects are listed as coming soon: we only open a dialect once we have a real native tutor teaching it, not before.",
   },
   {
     q: "Why does \"Book a trial class\" take me to kloversegy.com?",
-    a: "mkatub is Reham's Arabic-teaching brand, run alongside Klovers — the Korean-teaching academy she's run since 2013. Trial booking lives on Klovers' site because that's where her real, live scheduling already works; you'll land straight on the Arabic trial booking section.",
+    a: "mkatub is Reham's Arabic-teaching brand, run alongside Klovers, the Korean-teaching academy she's run since 2013. Trial booking lives on Klovers' site because that's where her real, live scheduling already works; you'll land straight on the Arabic trial booking section.",
   },
 ];

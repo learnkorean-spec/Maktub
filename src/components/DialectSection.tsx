@@ -18,7 +18,7 @@ export function DialectSection() {
           </Link>
         </div>
         <p className="mt-3 max-w-xl text-sm text-ink/60">
-          We only open a dialect once a real native tutor is teaching it —
+          We only open a dialect once a real native tutor is teaching it:
           nothing below is a placeholder pretending to be live.
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2">

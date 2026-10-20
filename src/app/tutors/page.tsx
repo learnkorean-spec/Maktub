@@ -8,7 +8,7 @@ import { tutor, TRIAL_BOOKING_URL } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Tutors & Trial Booking",
   description:
-    "Meet the real tutor teaching at mkatub today. No invented profiles — more tutors are listed here only once they're actually teaching.",
+    "Meet the real tutor teaching at mkatub today. No invented profiles: more tutors are listed here only once they're actually teaching.",
 };
 
 export default function TutorsPage() {
@@ -23,7 +23,7 @@ export default function TutorsPage() {
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-ink/70">
               One real tutor today. We don&rsquo;t pad this page with
-              placeholder profiles — a dialect only shows a tutor here once
+              placeholder profiles: a dialect only shows a tutor here once
               someone is actually teaching it.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function TutorsPage() {
               </h3>
               <p className="mt-2 text-sm text-ink/60">
                 Levantine and Gulf Arabic go live here the moment a real
-                native tutor is confirmed for them — not before.
+                native tutor is confirmed for them, not before.
               </p>
             </div>
           </div>

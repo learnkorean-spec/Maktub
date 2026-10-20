@@ -10,7 +10,7 @@ export function SiteFooter() {
           <div>
             <Logo variant="light" withTagline />
             <p className="mt-4 max-w-sm text-sm text-white/70">
-              Live online Arabic classes with native-speaking tutors — Modern
+              Live online Arabic classes with native-speaking tutors: Modern
               Standard Arabic and real spoken dialects, explained in English.
             </p>
           </div>

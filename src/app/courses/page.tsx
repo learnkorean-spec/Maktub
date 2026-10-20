@@ -8,7 +8,7 @@ import { TRIAL_BOOKING_URL } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Courses & Dialects",
   description:
-    "Find the right Arabic dialect for your goal — Egyptian Arabic and Modern Standard Arabic are open now; more dialects open as real tutors join.",
+    "Find the right Arabic dialect for your goal: Egyptian Arabic and Modern Standard Arabic are open now; more dialects open as real tutors join.",
 };
 
 export default function CoursesPage() {
@@ -22,7 +22,7 @@ export default function CoursesPage() {
               Courses & Dialects
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-ink/70">
-              Find the dialect that matches what you actually want to do —
+              Find the dialect that matches what you actually want to do:
               read and write formally, or speak the way people really talk.
               We only open a dialect once a real native tutor is teaching it.
             </p>
@@ -38,7 +38,7 @@ export default function CoursesPage() {
               Not sure which one you need?
             </h2>
             <p className="mt-3 text-ink/70">
-              A free intro call sorts that out in a few minutes — tell us your
+              A free intro call sorts that out in a few minutes. Tell us your
               goal and starting point, and we&rsquo;ll point you at the right
               dialect.
             </p>

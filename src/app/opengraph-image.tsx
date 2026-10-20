@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "mkatub — Speak real Arabic. Connect for real.";
+export const alt = "mkatub: Speak real Arabic. Connect for real.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -59,7 +59,7 @@ export default function OpengraphImage() {
             <span>Connect for real.</span>
           </div>
           <div style={{ fontSize: 28, color: "#d9d2bd", maxWidth: 820 }}>
-            Live classes with a real native-speaking tutor — Egyptian Arabic &amp; Modern
+            Live classes with a real native-speaking tutor: Egyptian Arabic &amp; Modern
             Standard Arabic.
           </div>
         </div>

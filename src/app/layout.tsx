@@ -25,13 +25,13 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mkatub.kloversegy.com"),
   title: {
-    default: "mkatub — Speak real Arabic. Connect for real.",
-    template: "%s — mkatub",
+    default: "mkatub: Speak real Arabic. Connect for real.",
+    template: "%s | mkatub",
   },
   description:
     "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
   openGraph: {
-    title: "mkatub — Speak real Arabic. Connect for real.",
+    title: "mkatub: Speak real Arabic. Connect for real.",
     description:
       "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
     siteName: "mkatub",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "mkatub — Speak real Arabic. Connect for real.",
+    title: "mkatub: Speak real Arabic. Connect for real.",
     description:
       "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
   },
