@@ -16,8 +16,11 @@ export function SiteFooter() {
           <nav className="flex gap-10 text-sm" aria-label="Footer">
             <div className="flex flex-col gap-2">
               <span className="font-semibold text-white/90">Learn</span>
-              <Link href="/#dialects" className="text-white/70 hover:text-white">
-                Dialects
+              <Link href="/courses" className="text-white/70 hover:text-white">
+                Courses & Dialects
+              </Link>
+              <Link href="/tutors" className="text-white/70 hover:text-white">
+                Tutors
               </Link>
               <Link href="/#how-it-works" className="text-white/70 hover:text-white">
                 How it works

@@ -20,6 +20,15 @@ export interface Dialect {
   arabicName: string;
   description: string;
   status: DialectStatus;
+  /**
+   * Real, user-supplied location/atmosphere photography (public/photography/)
+   * — never a tutor photo or a claimed student/review image. These are
+   * decorative scene-setting shots tied to where each dialect is spoken,
+   * not evidence of enrollment numbers or testimonials (still none of
+   * those exist — see the integrity rule above).
+   */
+  image: string;
+  imageAlt: string;
 }
 
 export const dialects: Dialect[] = [
@@ -30,6 +39,8 @@ export const dialects: Dialect[] = [
     description:
       "Real spoken Egyptian dialect — how people actually talk, and the dialect most widely understood across the Arab world thanks to Egyptian film and TV.",
     status: "available",
+    image: "/photography/egyptian-cairo-rooftop-study.jpg",
+    imageAlt: "A Cairo rooftop at sunset, minarets and the pyramids on the skyline",
   },
   {
     slug: "msa",
@@ -38,6 +49,8 @@ export const dialects: Dialect[] = [
     description:
       "The formal, written register — reading, writing, religious texts, media, and official documents. The same everywhere in the Arab world.",
     status: "available",
+    image: "/photography/msa-marrakech-rooftop.jpg",
+    imageAlt: "A riad terrace overlooking a Marrakech skyline at golden hour",
   },
   {
     slug: "levantine",
@@ -45,6 +58,8 @@ export const dialects: Dialect[] = [
     arabicName: "شامي",
     description: "Syria, Lebanon, Jordan and Palestine.",
     status: "coming-soon",
+    image: "/photography/levantine-sunset-mosque.jpg",
+    imageAlt: "A Levantine old-city skyline with minarets at sunset",
   },
   {
     slug: "gulf",
@@ -52,6 +67,8 @@ export const dialects: Dialect[] = [
     arabicName: "خليجي",
     description: "Saudi Arabia, the UAE, Kuwait and beyond.",
     status: "coming-soon",
+    image: "/photography/gulf-dubai-skyline.jpg",
+    imageAlt: "A Gulf city skyline seen from a terrace at dusk",
   },
 ];
 
