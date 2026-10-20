@@ -47,11 +47,17 @@ export interface Dialect {
   description: string;
   status: DialectStatus;
   /**
-   * Real, user-supplied location/atmosphere photography (public/photography/)
-   * — never a tutor photo or a claimed student/review image. These are
-   * decorative scene-setting shots tied to where each dialect is spoken,
-   * not evidence of enrollment numbers or testimonials (still none of
-   * those exist — see the integrity rule above).
+   * Location/atmosphere photography (public/photography/) tied to where
+   * each dialect is spoken — not a tutor photo, and never a specific
+   * claimed student/review (still none of those exist — see the integrity
+   * rule above).
+   *
+   * 2026-10-20 (Re, explicit): these now include people in the scene
+   * (friends/learners chatting, not posed "testimonial" shots), overriding
+   * this file's earlier "never show people" note. Re's reasoning: Reham
+   * has had real students for years, so a lived-in scene with people
+   * doesn't misrepresent anything — it's still not a specific claimed
+   * review or enrollment count, just ambiance.
    */
   image: string;
   imageAlt: string;
@@ -66,7 +72,7 @@ export const dialects: Dialect[] = [
       "Real spoken Egyptian dialect — how people actually talk, and the dialect most widely understood across the Arab world thanks to Egyptian film and TV.",
     status: "available",
     image: "/photography/egyptian-cairo-rooftop-study.jpg",
-    imageAlt: "A Cairo rooftop at sunset, minarets and the pyramids on the skyline",
+    imageAlt: "Friends chatting on a Cairo rooftop at sunset, minarets and the pyramids on the skyline",
   },
   {
     slug: "msa",
@@ -76,7 +82,7 @@ export const dialects: Dialect[] = [
       "The formal, written register — reading, writing, religious texts, media, and official documents. The same everywhere in the Arab world.",
     status: "available",
     image: "/photography/msa-marrakech-rooftop.jpg",
-    imageAlt: "A riad terrace overlooking a Marrakech skyline at golden hour",
+    imageAlt: "Two people talking on a riad terrace overlooking a Marrakech skyline at golden hour",
   },
   {
     slug: "levantine",
@@ -85,7 +91,7 @@ export const dialects: Dialect[] = [
     description: "Syria, Lebanon, Jordan and Palestine.",
     status: "coming-soon",
     image: "/photography/levantine-sunset-mosque.jpg",
-    imageAlt: "A Levantine old-city skyline with minarets at sunset",
+    imageAlt: "Two people talking on a stone terrace overlooking a Levantine old-city skyline at sunset",
   },
   {
     slug: "gulf",
@@ -94,7 +100,7 @@ export const dialects: Dialect[] = [
     description: "Saudi Arabia, the UAE, Kuwait and beyond.",
     status: "coming-soon",
     image: "/photography/gulf-dubai-skyline.jpg",
-    imageAlt: "A Gulf city skyline seen from a terrace at dusk",
+    imageAlt: "People talking on a terrace with a Gulf city skyline at dusk",
   },
 ];
 

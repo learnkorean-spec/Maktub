@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative isolate overflow-hidden bg-forest text-white">
       <Image
         src="/photography/egyptian-cairo-rooftop-call.jpg"
-        alt="A Cairo rooftop terrace at sunset, with minarets on the skyline"
+        alt="Friends talking over tea on a Cairo rooftop terrace at sunset, pyramids and minarets on the skyline"
         fill
         priority
         sizes="100vw"
