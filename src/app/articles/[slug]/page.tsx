@@ -17,7 +17,17 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) return {};
-  return { title: article.title, description: article.description };
+  return {
+    title: article.title,
+    description: article.description,
+    alternates: { canonical: `/articles/${article.slug}` },
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      type: "article",
+      publishedTime: article.publishedAt,
+    },
+  };
 }
 
 export default async function ArticlePage({ params }: { params: Params }) {
@@ -25,8 +35,25 @@ export default async function ArticlePage({ params }: { params: Params }) {
   const article = getArticle(slug);
   if (!article) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
+    inLanguage: "en",
+    author: { "@type": "Organization", name: "mkatub" },
+    publisher: { "@type": "Organization", name: "mkatub" },
+    mainEntityOfPage: `https://mkatub.kloversegy.com/articles/${article.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <main id="main-content" className="flex-1">
         <article className="bg-white py-16 sm:py-20">
