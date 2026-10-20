@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "mkatub — Speak real Arabic. Connect for real.",
+    description:
+      "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
+  },
   icons: {
     icon: "/favicon.svg",
   },
