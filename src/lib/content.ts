@@ -126,4 +126,8 @@ export const faq = [
     q: "Which dialects are actually available right now?",
     a: "Egyptian Arabic and Modern Standard Arabic are live today. Other dialects are listed as coming soon — we only open a dialect once we have a real native tutor teaching it, not before.",
   },
+  {
+    q: "Why does \"Book a trial class\" take me to kloversegy.com?",
+    a: "mkatub is Reham's Arabic-teaching brand, run alongside Klovers — the Korean-teaching academy she's run since 2013. Trial booking lives on Klovers' site because that's where her real, live scheduling already works; you'll land straight on the Arabic trial booking section.",
+  },
 ];
