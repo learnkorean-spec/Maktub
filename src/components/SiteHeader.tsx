@@ -40,12 +40,19 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <PrimaryCTA
-            href={TRIAL_BOOKING_URL}
-            className="hidden text-sm px-5 py-2.5 sm:inline-flex"
-          >
-            Book a trial class
-          </PrimaryCTA>
+          {/* Wrap rather than pass "hidden sm:inline-flex" straight into
+              PrimaryCTA's className: that component already applies an
+              unconditional `inline-flex` base class, and Tailwind resolves
+              same-specificity utilities by stylesheet order, not by their
+              order in the class list -- so `inline-flex` could silently
+              win over `hidden` and show this button on mobile regardless
+              of viewport width. Hiding the wrapper instead sidesteps the
+              clash entirely. */}
+          <div className="hidden sm:inline-flex">
+            <PrimaryCTA href={TRIAL_BOOKING_URL} className="text-sm px-5 py-2.5">
+              Book a trial class
+            </PrimaryCTA>
+          </div>
           <MobileNav navLinks={navLinks} />
         </div>
       </div>
