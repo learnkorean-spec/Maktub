@@ -6,6 +6,7 @@ import { TRIAL_BOOKING_URL } from "@/lib/content";
 
 const navLinks = [
   { href: "/courses", label: "Courses" },
+  { href: "/learn", label: "Learn" },
   { href: "/tutors", label: "Tutors" },
   { href: "/articles", label: "Articles" },
   { href: "/#faq", label: "FAQ" },
