@@ -13,7 +13,7 @@
  */
 
 /**
- * mkatub has no booking backend of its own (no Supabase project, no
+ * maktub has no booking backend of its own (no Supabase project, no
  * Cal.com) — see the README's business-data blocker table. Rather than
  * fake a calendar, every "Book a trial" CTA links to the one real,
  * already-live trial-booking system: Reham's PersonalTrialBooking widget
@@ -27,7 +27,7 @@ export const TRIAL_BOOKING_URL = "https://kloversegy.com/learn-arabic#trial-book
 /**
  * Reham's bio facts, pulled from her existing, already-public page at
  * kloversegy.com/learn-arabic (src/pages/LearnArabicPage.tsx in the
- * klovers repo) on 2026-10-20 — not re-derived or invented for mkatub.
+ * klovers repo) on 2026-10-20 — not re-derived or invented for maktub.
  */
 export const tutor = {
   name: "Reham Elshrkawy",
@@ -134,6 +134,6 @@ export const faq = [
   },
   {
     q: "Why does \"Book a trial class\" take me to kloversegy.com?",
-    a: "mkatub is Reham's Arabic-teaching brand, run alongside Klovers, the Korean-teaching academy she's run since 2013. Trial booking lives on Klovers' site because that's where her real, live scheduling already works; you'll land straight on the Arabic trial booking section.",
+    a: "maktub is Reham's Arabic-teaching brand, run alongside Klovers, the Korean-teaching academy she's run since 2013. Trial booking lives on Klovers' site because that's where her real, live scheduling already works; you'll land straight on the Arabic trial booking section.",
   },
 ];

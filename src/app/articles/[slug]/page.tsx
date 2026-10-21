@@ -51,8 +51,8 @@ export default async function ArticlePage({ params }: { params: Params }) {
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     inLanguage: "en",
-    author: { "@type": "Organization", name: "mkatub" },
-    publisher: { "@type": "Organization", name: "mkatub" },
+    author: { "@type": "Organization", name: "maktub" },
+    publisher: { "@type": "Organization", name: "maktub" },
     mainEntityOfPage: `https://mkatub.kloversegy.com/articles/${article.slug}`,
   };
 

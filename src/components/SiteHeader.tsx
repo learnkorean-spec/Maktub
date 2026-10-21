@@ -25,7 +25,7 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" aria-label="mkatub home">
+        <Link href="/" aria-label="maktub home">
           <Logo />
         </Link>
         <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">

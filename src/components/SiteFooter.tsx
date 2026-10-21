@@ -47,7 +47,7 @@ export function SiteFooter() {
           {/* Static on purpose — next build's Cache Components mode treats
               `new Date()` as an unstable prerender value. Bump this by hand
               each year rather than computing it. */}
-          © 2026 mkatub. Arabi made simple.
+          © 2026 maktub. Arabi made simple.
         </p>
       </div>
     </footer>

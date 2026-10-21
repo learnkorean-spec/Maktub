@@ -2,7 +2,7 @@
  * Self-learning video reels — short, silent-friendly-but-narrated
  * flashcard animations teaching the Arabic alphabet, 4 letters at a
  * time. Real, already-produced media (see README "Configured vs
- * missing" row 7, "real recordings") supplied directly for mkatub's
+ * missing" row 7, "real recordings") supplied directly for maktub's
  * own self-learning page — not stock footage, not invented content.
  *
  * Files live in public/reels/. Each reel has a matching poster frame

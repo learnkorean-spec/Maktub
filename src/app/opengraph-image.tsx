@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "mkatub: Speak real Arabic. Connect for real.";
+export const alt = "maktub: Speak real Arabic. Connect for real.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -40,7 +40,7 @@ export default function OpengraphImage() {
             <circle cx="38.1" cy="11.3" r="1" fill={IVORY} />
           </svg>
           <div style={{ fontSize: 34, fontWeight: 700, color: IVORY, letterSpacing: -0.5 }}>
-            mkatub
+            maktub
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>

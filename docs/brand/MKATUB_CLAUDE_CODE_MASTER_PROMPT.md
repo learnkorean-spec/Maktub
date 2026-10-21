@@ -1,8 +1,8 @@
-# MKATUB — Claude Code implementation master prompt
+# MAKTUB — Claude Code implementation master prompt
 
-**Project:** mkatub (Arabic: مكتوب), a live Arabic-learning platform for international learners.  
-**Input source of truth:** `MKATUB_Complete_Brand_Moodboard_Claude_Code_Handoff.pdf`  
-**Artwork:** `mkatub_master_moodboard.png`, `homepage_reference.png`, `courses_reference.png`, `tutors_reference.png`, `selected_logo_concept_04.png` in the handoff archive.  
+**Project:** maktub (Arabic: مكتوب), a live Arabic-learning platform for international learners.  
+**Input source of truth:** `MAKTUB_Complete_Brand_Moodboard_Claude_Code_Handoff.pdf`  
+**Artwork:** `maktub_master_moodboard.png`, `homepage_reference.png`, `courses_reference.png`, `tutors_reference.png`, `selected_logo_concept_04.png` in the handoff archive.  
 **IMPORTANT:** Visual images are illustrative moodboards, **not verified product data**. Don't carry their invented reviews, metrics, tutor details, dates, prices, or claimed features into production.
 
 ## Role and operating procedure
@@ -16,8 +16,8 @@ Act as the principal frontend engineer, UX lead, product architect, accessibilit
 
 ## Brand lock
 
-- **Written brand:** `mkatub` (lowercase Latin / Franco-Arabic). Secondary Arabic: `مكتوب`. Do **not** change to `Maktoub`, `Maktub`, `Nafham` or another brand without approval.
-- **Selected logo:** concept #4: bold, soft, modern, dark-green/black abstract **M** letterform with a distinctive lime-green circular dot/accent and compact `mkatub` wordmark. Tagline: **ARABI MADE SIMPLE.** Rebuild as clean original vector SVG rather than using the screenshot crop as the shipping logo. It must be readable at 24px and in an app icon. Prepare horizontal, compact, light, dark, mono exports.
+- **Written brand:** `maktub` (lowercase Latin / Franco-Arabic). Secondary Arabic: `مكتوب`. Do **not** change to `Maktoub`, `Maktub`, `Nafham` or another brand without approval.
+- **Selected logo:** concept #4: bold, soft, modern, dark-green/black abstract **M** letterform with a distinctive lime-green circular dot/accent and compact `maktub` wordmark. Tagline: **ARABI MADE SIMPLE.** Rebuild as clean original vector SVG rather than using the screenshot crop as the shipping logo. It must be readable at 24px and in an app icon. Prepare horizontal, compact, light, dark, mono exports.
 - **Design tokens:** primary neon lime `#B6FF00`; deep forest `#0B2D1F`; ink `#061B17`; ivory `#FFF9EC`; sand `#EADFCB`; sage `#6B8F5B`; terracotta `#C47F5A`; white `#FFFFFF`.
 - **Colour usage:** Neon lime for high-emphasis CTA, active selection, learning progress and micro highlights. Deep forest for premium high-contrast hero and select panels. Ivory/white on informational surfaces. Use **dark text on lime** and never use neon-on-ivory for body text. Avoid excessive glow and WhatsApp icon/mark imitation.
 - **Typography:** Plus Jakarta Sans for headings, Inter for interface/body, Noto Sans Arabic or Cairo for Arabic script. Use accessible font fallbacks, language tagging and proper RTL.
@@ -25,7 +25,7 @@ Act as the principal frontend engineer, UX lead, product architect, accessibilit
 - **Hero English copy:** `Speak real Arabic. Connect for real.`  
   Subheading: `Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.`  
   Primary CTA `Book a trial class`; secondary CTA `Explore dialects`.
-- **Franco-Arabic accent:** `Ehki Arabi. B'sara7a.` and `Ahlan fi mkatub` may appear in selected accent copy. The language team must review spellings before publication. Franco/Arabizi should not replace native Arabic script in teaching material.
+- **Franco-Arabic accent:** `Ehki Arabi. B'sara7a.` and `Ahlan fi maktub` may appear in selected accent copy. The language team must review spellings before publication. Franco/Arabizi should not replace native Arabic script in teaching material.
 
 ## Product positioning
 

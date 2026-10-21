@@ -1,5 +1,5 @@
 /**
- * mkatub's own articles — written for this launch (2026-10-20), not
+ * maktub's own articles — written for this launch (2026-10-20), not
  * imported from klovers. Content is general, factual language-learning
  * guidance; nothing here invents student numbers, reviews, or results.
  * Where it's useful to send a reader to Reham's longer personal story,

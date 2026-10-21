@@ -1,11 +1,11 @@
-# mkatub (مكتوب)
+# maktub (مكتوب)
 
-Live Arabic-learning platform for international learners. Brand: `mkatub`
+Live Arabic-learning platform for international learners. Brand: `maktub`
 (Latin/Franco-Arabic), secondary Arabic `مكتوب`. Tagline: **Arabi made
 simple.**
 
 Source of truth for brand/product decisions:
-[`docs/brand/MKATUB_CLAUDE_CODE_MASTER_PROMPT.md`](docs/brand/MKATUB_CLAUDE_CODE_MASTER_PROMPT.md).
+[`docs/brand/MAKTUB_CLAUDE_CODE_MASTER_PROMPT.md`](docs/brand/MAKTUB_CLAUDE_CODE_MASTER_PROMPT.md).
 The moodboard images in `docs/brand/` are illustrative reference only —
 per that file, their invented reviews/metrics/tutor details never belong
 in product code (see `src/lib/content.ts`'s comment).
@@ -31,7 +31,7 @@ Per the master prompt's delivery stages, this repo currently has:
 - `/book-trial` — redirects straight to the real trial-booking widget
 - Real trial booking: every "Book a trial" CTA links to Reham's live
   `PersonalTrialBooking` widget on `kloversegy.com/learn-arabic#trial-booking`
-  (Supabase-backed slots + WhatsApp fallback) — mkatub has no booking
+  (Supabase-backed slots + WhatsApp fallback) — maktub has no booking
   backend of its own, so this links out rather than faking a calendar
 - `not-found.tsx` — branded 404 (was the bare Next.js default)
 - SEO: `sitemap.ts`, `robots.ts`, per-page metadata, a generated OG/
@@ -165,7 +165,7 @@ it:
 
 ## Deployment (subdomain of kloversegy.com)
 
-This is a separate Vercel project (`mkatub`) from the `klovers` repo/
+This is a separate Vercel project (`maktub`) from the `klovers` repo/
 project, pointed at `mkatub.kloversegy.com`. The project and domain are
 already set up; `mkatub.kloversegy.com` has appeared as a `READY` alias
 on recent production deployments, so the CNAME is believed to have
@@ -179,12 +179,12 @@ registrar access, not something to re-investigate unprompted.
 **not** legacy copy to be superseded. It is the one real, already-live
 trial-booking system — Reham's `PersonalTrialBooking` widget, backed by
 a real Supabase `personal_trial_slots` table with a WhatsApp fallback.
-mkatub has no booking backend of its own.
+maktub has no booking backend of its own.
 
 An earlier pass in this project briefly redirected `/learn-arabic` to
-mkatub and then reverted it on realizing this would have broken the only
+maktub and then reverted it on realizing this would have broken the only
 real booking flow in production. The correct, current architecture is
-the opposite direction: mkatub's CTAs link **out to**
+the opposite direction: maktub's CTAs link **out to**
 `kloversegy.com/learn-arabic#trial-booking` (see `TRIAL_BOOKING_URL` in
 `src/lib/content.ts`). **Never add a redirect that sends `/learn-arabic`
 or `/ar/learn-arabic` away from klovers** unless a human explicitly

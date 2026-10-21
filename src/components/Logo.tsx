@@ -1,11 +1,11 @@
 /**
- * Original mkatub logo, built as vector shapes (not a trace of the
+ * Original maktub logo, built as vector shapes (not a trace of the
  * moodboard screenshot). Two pieces:
  *
  * - `LogoMark`: the icon alone — a lime badge with a dark bold "m" and a
  *   small ink accent dot, echoing concept #4's circular accent while
  *   staying legible at 24px / as an app icon favicon.
- * - `Logo`: the full header lockup — mark + "mkatub" wordmark, with an
+ * - `Logo`: the full header lockup — mark + "maktub" wordmark, with an
  *   optional tagline line.
  *
  * NOTE for whoever picks this up next: this is a clean, original,
@@ -27,7 +27,7 @@ export function LogoMark({ className = "" }: { className?: string }) {
       viewBox="0 0 48 48"
       className={className}
       role="img"
-      aria-label="mkatub"
+      aria-label="maktub"
     >
       <rect width="48" height="48" rx="14" fill="#B6FF00" />
       <path
@@ -50,7 +50,7 @@ export function Logo({ variant = "dark", withTagline = false, className = "" }: 
           className="font-heading text-2xl font-extrabold tracking-tight"
           style={{ color: wordmarkColor }}
         >
-          mkatub
+          maktub
         </span>
       </div>
       {withTagline && (

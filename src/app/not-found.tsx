@@ -25,7 +25,7 @@ export default function NotFound() {
               where you probably meant to go.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <PrimaryCTA href="/">Back to mkatub</PrimaryCTA>
+              <PrimaryCTA href="/">Back to maktub</PrimaryCTA>
               <PrimaryCTA href="/courses" variant="outline-dark">
                 See the courses
               </PrimaryCTA>

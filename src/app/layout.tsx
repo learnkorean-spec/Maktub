@@ -25,22 +25,22 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mkatub.kloversegy.com"),
   title: {
-    default: "mkatub: Speak real Arabic. Connect for real.",
-    template: "%s | mkatub",
+    default: "maktub: Speak real Arabic. Connect for real.",
+    template: "%s | maktub",
   },
   description:
     "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
   openGraph: {
-    title: "mkatub: Speak real Arabic. Connect for real.",
+    title: "maktub: Speak real Arabic. Connect for real.",
     description:
       "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
-    siteName: "mkatub",
+    siteName: "maktub",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "mkatub: Speak real Arabic. Connect for real.",
+    title: "maktub: Speak real Arabic. Connect for real.",
     description:
       "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "mkatub",
+  name: "maktub",
   url: "https://mkatub.kloversegy.com",
   description:
     "Learn Egyptian Arabic, Modern Standard Arabic and other supported dialects in live classes with native-speaking tutors.",
@@ -62,7 +62,7 @@ const organizationJsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "mkatub",
+  name: "maktub",
   url: "https://mkatub.kloversegy.com",
 };
 

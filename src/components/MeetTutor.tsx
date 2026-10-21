@@ -6,7 +6,7 @@ import { PrimaryCTA } from "./PrimaryCTA";
  * The one tutor confirmed as real right now: Reham, who also teaches
  * Korean at Klovers and already teaches Arabic to foreigners at
  * kloversegy.com/learn-arabic. Bio, quote and photo pulled from that page
- * on 2026-10-20 (src/lib/content.ts) — not invented for mkatub.
+ * on 2026-10-20 (src/lib/content.ts) — not invented for maktub.
  */
 export function MeetTutor() {
   return (

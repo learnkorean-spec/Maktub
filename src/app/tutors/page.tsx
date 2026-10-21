@@ -8,7 +8,7 @@ import { tutor, TRIAL_BOOKING_URL } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Tutors & Trial Booking",
   description:
-    "Meet the real tutor teaching at mkatub today. No invented profiles: more tutors are listed here only once they're actually teaching.",
+    "Meet the real tutor teaching at maktub today. No invented profiles: more tutors are listed here only once they're actually teaching.",
   alternates: { canonical: "/tutors" },
 };
 
